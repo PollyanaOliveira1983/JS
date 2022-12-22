@@ -39,7 +39,13 @@ const dados = [
 //---------------------------------------------------------------------------
 
 function funcionariosTerceirizados(list) {
-
+  const result = [];
+  for (let i=0; i<list.length; i++){
+    if(list[i].terceirizado){
+      result.push(list[i]);
+    }
+  }
+  return result;
 }
 
 //---------------------------------------------------------------------------
@@ -50,7 +56,12 @@ function funcionariosTerceirizados(list) {
 //---------------------------------------------------------------------------
 
 function custoTotal(list) {
-
+  let total = 0;
+  for (let i=0; i<list.length; i++){
+    const subtotal = list[i].horasTrabalhadas * list[i].valorHora;
+    total = total + subtotal;
+  }
+  return total;
 }
 
 //---------------------------------------------------------------------------
