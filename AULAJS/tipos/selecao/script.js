@@ -19,4 +19,14 @@ card1.appendChild(paragrafo);
 card1.classList.add("super-border");
 
 const cards = document.querySelectorAll(".card");
+
+//como era usado antes
+//const cards = document.getElementsByClassName("card");
+
 console.log(cards);
+console.log(cards[0]);
+
+Array.from(cards).map(item => {
+    console.log(item.innerHTML);
+})
+
