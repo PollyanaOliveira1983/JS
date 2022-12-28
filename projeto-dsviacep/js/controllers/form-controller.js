@@ -75,6 +75,7 @@ function handleBtnSaveClick(event) {
         keys.forEach(key => {
             setFormError(key, errors[key]);
         });
+        //for(let i=0; i<keys.length; i++){ setFormError(key[i], errors[key[i]]);}
     }
     else {
         listController.addCard(state.address);
